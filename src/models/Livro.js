@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { autorSchema } from "./Autor.js";
 
 const livroSchema = new mongoose.Schema(
   {
@@ -12,7 +11,7 @@ const livroSchema = new mongoose.Schema(
       type: String,
       required: [true, "A editora do livro é obrigatório"],
       enum: {
-        values: ["Casa do código", "Alura"],
+        values: ["Casa do código", "Alura", "Classicos Franceses"],
         message: "A editora {VALUE} fornecida não é permitida",
       },
     },
